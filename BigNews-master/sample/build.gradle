@@ -1,0 +1,50 @@
+//noinspection GradleDependency
+apply plugin: 'com.android.application'
+//version = "0.1.2"
+
+android {
+    compileSdkVersion 28
+//    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "ha.excited.bignews"
+//        minSdkVersion 14
+//        targetSdkVersion 28
+//        versionCode 1
+//        versionName version
+
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // 注意：这是解决java_1.8声明的关键点。
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation project(':library')
+//    implementation 'com.android.support:support-compat:28.0.0'
+//    testImplementation 'junit:junit:4.12'
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+}
