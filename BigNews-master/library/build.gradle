@@ -11,16 +11,10 @@ def librarys = rootProject.ext.supportDependencies
 
 android {
 
-
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
 
     defaultConfig {
-
-//        minSdkVersion 9
-//        targetSdkVersion 22
-//        versionCode 1
-//        versionName version
 
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
