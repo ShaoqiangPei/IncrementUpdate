@@ -49,6 +49,8 @@
          */
         BigNews.make(String oldPath,String newPath,String patchPath);
 ```
-
+#### `差分&合成`文件工具
+请参考我的另一个库`RetroHttp`中[Apk文件下载与安装](https://github.com/ShaoqiangPei/RetroHttp/blob/master/read/Apk%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85.md
+)的第四点(关于增量更新)里面介绍的`windows`版的`差分&合成`文件工具。
 
 
